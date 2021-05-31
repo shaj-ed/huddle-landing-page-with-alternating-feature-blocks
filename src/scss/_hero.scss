@@ -1,0 +1,79 @@
+@use 'variables' as *;
+
+.intro {
+  width: 100%;
+  background: url("./../images/bg-hero-mobile.svg") no-repeat center center /
+    cover;
+  background-color: $color-pale-cyan;
+
+  @include response-size(medium) {
+    background-image: url("./../images/bg-hero-desktop.svg");
+  }
+
+  &--container {
+    max-width: 129rem;
+    margin: 0 auto;
+  }
+}
+
+.hero {
+  padding: 7.5rem 4.5rem 7.5rem 4.5rem;
+  text-align: center;
+
+  @include response-size(xlarge) {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7rem;
+  }
+
+  @include response-size(xxLarge) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+
+    @include response-size(large) {
+      font-size: 4rem;
+    }
+  }
+
+  &__description {
+    max-width: 51.5rem;
+    font-size: 1.5rem;
+    font-weight: $fw-regular;
+    margin: 3rem auto 3rem auto;
+
+    @include response-size(xlarge) {
+      width: 51.5rem;
+      font-size: 1.7rem;
+    }
+  }
+
+  &__cta {
+    @extend .button;
+    padding: 1.6rem 6rem;
+    display: inline-block;
+
+    @include response-size(medium) {
+      padding: 2rem 7rem;
+    }
+  }
+
+  &__image {
+    max-width: 69rem;
+    margin: 6.5rem auto 0 auto;
+
+    @include response-size(xlarge) {
+      margin: 0 auto 0 auto;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

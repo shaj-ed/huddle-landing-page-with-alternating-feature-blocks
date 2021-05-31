@@ -1,0 +1,42 @@
+@use 'variables' as *;
+
+.header {
+  padding: 2.5rem 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include response-size(large) {
+    padding: 4.8rem 1.8rem;
+  }
+
+  @include response-size(xxLarge) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  &__logo {
+    @extend .logo;
+  }
+
+  &__cta {
+    text-decoration: none;
+    padding: 0.8rem 3rem;
+    color: $color-dark-cyan;
+    background-color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: $fw-bold;
+    border-radius: 3rem;
+    box-shadow: 0.2rem 0.2rem 1rem rgba($color-dark-cyan, 0.08),
+      -0.2rem -0.2rem 1rem rgba($color-dark-cyan, 0.08);
+
+    &:hover {
+      color: $color-pink;
+    }
+
+    @include response-size(medium) {
+      font-size: 1.6rem;
+      padding: 1.6rem 6rem;
+    }
+  }
+}

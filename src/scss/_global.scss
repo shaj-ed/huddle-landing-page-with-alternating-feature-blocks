@@ -1,0 +1,22 @@
+@use 'variables' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  font-family: $font-main;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+  font-weight: $fw-semi-bold;
+}

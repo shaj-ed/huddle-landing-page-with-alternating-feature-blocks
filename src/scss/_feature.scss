@@ -1,0 +1,59 @@
+@use 'variables' as *;
+
+.features {
+  width: 100%;
+  padding: 7.2rem 2.2rem 27.5rem 2.2rem;
+
+  &--container {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+}
+
+// Main features
+.feature {
+  max-width: 40.2rem;
+  margin: 0 auto;
+  padding: 4rem 5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  text-align: center;
+  box-shadow: $shadow;
+
+  @include response-size(medium) {
+    max-width: 100%;
+    padding-right: 4.2rem 5.3rem;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: left;
+
+    &.different {
+      flex-direction: row;
+    }
+  }
+
+  &.different {
+    margin: 4.5rem auto;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+
+    @include response-size(medium) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    color: $color-grayish-blue;
+  }
+}

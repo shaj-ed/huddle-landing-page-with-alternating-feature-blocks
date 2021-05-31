@@ -1,0 +1,49 @@
+@use 'variables' as *;
+
+.signup {
+  position: absolute;
+  width: 100%;
+  padding: 0 2.2rem 0 2.2rem;
+  transform: translateY(-12rem);
+  background-color: transparent;
+  z-index: 1;
+
+  @include response-size(medium) {
+    transform: translateY(-16rem);
+  }
+
+  &--container {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 5.5rem 2.8rem;
+    box-shadow: $shadow;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: #fff;
+
+    @include response-size(medium) {
+      padding: 7.5rem 13rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    margin-bottom: 3.2rem;
+
+    @include response-size(medium) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__cta {
+    @extend .button;
+    display: inline-block;
+    padding: 2rem 6rem;
+
+    @include response-size(medium) {
+      padding: 3rem 10rem;
+      font-size: 1.6rem;
+    }
+  }
+}

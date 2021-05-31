@@ -1,0 +1,107 @@
+@use 'variables' as *;
+
+.footer {
+  width: 100%;
+  padding: 16.5rem 2rem 5.5rem 2rem;
+  background-color: $color-dark-cyan;
+  color: $color-pale-cyan;
+
+  @include response-size(medium) {
+    padding-top: 22rem;
+  }
+
+  &--container {
+    max-width: 125rem;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    @extend .logo;
+    display: inline-block;
+    margin-bottom: 3.2rem;
+  }
+
+  &--grid {
+    display: grid;
+    gap: 6.5rem;
+
+    @include response-size(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include response-size(xlarge) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__address-phone {
+    margin: 3.5rem 0;
+  }
+
+  span {
+    max-width: 33rem;
+    font-size: 1.5rem;
+
+    @include response-size(xlarge) {
+      font-size: 1.6rem;
+      width: 33rem;
+    }
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: $color-pale-cyan;
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 2.5rem;
+    transition: $transiiton-all;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__social {
+    justify-self: center;
+    display: flex;
+    gap: 1.2rem;
+
+    @include response-size(medium) {
+      justify-self: start;
+    }
+
+    li {
+      width: 3.5rem;
+      height: 3.5rem;
+      background-color: transparent;
+      display: grid;
+      place-items: center;
+      border: 0.1rem solid $color-pale-cyan;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: $transiiton-all;
+
+      &:hover {
+        border-color: $color-pink;
+        a {
+          color: $color-pink;
+        }
+      }
+
+      a {
+        font-size: 1.6rem;
+        color: $color-pale-cyan;
+      }
+    }
+  }
+
+  &__copy {
+    margin-top: 3.2rem;
+    text-align: center;
+    font-size: 1.4rem;
+
+    @include response-size(xlarge) {
+      text-align: right;
+    }
+  }
+}
